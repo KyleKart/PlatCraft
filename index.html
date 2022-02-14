@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>Minecraft</title>
+  <title>PlatCraft</title>
   <style>
     body {
-      color: #ffffff;
+      color: #1ca013;
       font-family: sans-serif;
       overflow: hidden;
       margin: 0;
@@ -112,10 +112,10 @@
       border-radius: 4px;
     }
     .control-button:hover {
-      background: #ff4c4c26;
+      background: #45454526;
     }
     .control-button.active {
-      background: #ff4c4c59;
+      background: #45454559;
     }
     .fullscreen-button {
       background: white !important;
@@ -130,7 +130,7 @@
       cursor: pointer;
     }
     .sc-canvas {
-      cursor: auto;
+      cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEUAAAAOPzZoTh4oHgsrx6wnspoz68tJNhWJZyf///8wH/z2AAAAAXRSTlMAQObYZgAAAAFiS0dECfHZpewAAAAJcEhZcwAAAMgAAADIAGP6560AAAAHdElNRQfmAg4QNxuQkrzEAAAAAW9yTlQBz6J3mgAAAGRJREFUKM9jYKAnEAQB3AJKxoIuoaEuaYI4Bco7QkNRtGAICIa6GKPaiSYANLFcyRivQKgg0FxjDAFmFAEGZE2YAi6CYNcZ4xaA+AqhCUOAQRDmR2NcAvBgUDImIICpCZspGAIAzbkgsDuGImQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjItMDItMTRUMTY6NTU6MjYrMDA6MDCOjkWtAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIyLTAyLTE0VDE2OjU1OjI1KzAwOjAwzjvnjAAAAABJRU5ErkJggg==), auto;
     }
     
   </style>
@@ -197,7 +197,7 @@
       scaffolding.width = 480;
       scaffolding.height = 360;
       scaffolding.resizeMode = "preserve-ratio";
-      scaffolding.editableLists = false;
+      scaffolding.editableLists = true;
       scaffolding.setup();
       scaffolding.appendTo(appElement);
 
@@ -213,7 +213,7 @@
       };
 
       scaffolding.setUsername("player####".replace(/#/g, () => Math.floor(Math.random() * 10)));
-      scaffolding.setAccentColor("#ff4c4c");
+      scaffolding.setAccentColor("#454545");
 
       scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "p4-@Super Mario All-Stars_ Super Mario Bros. (Version 10 remix-4.sb3"));
 
@@ -237,7 +237,7 @@
           }
         });
         const otherControlsExist = false;
-        const fillColor = otherControlsExist ? '#575E75' : '#ffffff';
+        const fillColor = otherControlsExist ? '#575E75' : '#1ca013';
         const updateFullScreen = () => {
           isFullScreen = !!(document.fullscreenElement || document.webkitFullscreenElement);
           document.body.classList.toggle('is-fullscreen', isFullScreen);
